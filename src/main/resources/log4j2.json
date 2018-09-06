@@ -1,0 +1,44 @@
+{
+  "configuration": {
+    "status": "error",
+    "name": "JSONConfigDemo",
+    "packages": "com.howtodoinjava",
+    "ThresholdFilter": {
+      "level": "debug"
+    },
+    "appenders": {
+      "Console": {
+        "name": "STDOUT",
+        "PatternLayout": {
+          "pattern": "%d [%t] %-5p %c - %m%n"
+        }
+      },
+      "RollingFile": {
+        "name":"File",
+        "fileName":"default-project.log",
+        "filePattern":"default-project-backup-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "PatternLayout": {
+          "pattern":"%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %m%n"
+        },
+        "Policies": {
+          "SizeBasedTriggeringPolicy": {
+            "size":"10 MB"
+          }
+        },
+        "DefaultRolloverStrategy": {
+          "max":"10"
+        }
+      }
+    },
+    "loggers": {
+      "root": {
+        "level": "debug",
+        "AppenderRef": {
+          "ref": "STDOUT",
+          "ref": "File"
+        }
+      }
+
+    }
+  }
+}
