@@ -1,0 +1,1 @@
+# sample-log4j2
