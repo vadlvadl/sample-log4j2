@@ -33,12 +33,12 @@
     "loggers": {
       "root": {
         "level": "debug",
-        "AppenderRef": {
-          "ref": "STDOUT",
-          "ref": "File"
+        "AppenderRef": [
+          {"ref": "STDOUT"},
+          {"ref": "File"}
+          ]
         }
       }
 
     }
   }
-}

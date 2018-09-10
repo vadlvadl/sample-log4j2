@@ -2,9 +2,8 @@
 
 <suite name="TestSuite">
     <test name="Test">
-        <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="SampleTest1"/>
+            <class name="LoggingTest"/>
         </classes>
     </test>
 </suite>
