@@ -5,11 +5,10 @@ import org.testng.annotations.Test;
 public class SampleTest1 {
 
     private static final Logger LOGGER =
-            LogManager.getLogger(SomeTest.class.getName());
+            LogManager.getLogger(SampleTest1.class.getName());
 
     @Test
     public void TestCase1() {
-//        System.out.println("TestCase1"); }
         LOGGER.debug("Some Test - debug message");
         LOGGER.info("Some Test - info message");
         LOGGER.error("Some Test - error message");
@@ -17,7 +16,7 @@ public class SampleTest1 {
 
     @Test
     public void TestCase2() {
-        LOGGER.trace(SomeTest.class.getCanonicalName());
+        LOGGER.info(SampleTest1.class.getCanonicalName());
         LOGGER.fatal("TestCase2 - Fatal message");
     }
 }
