@@ -12,6 +12,14 @@ public class LoggingTest {
         LOGGER.debug("Some Test - debug message");
         LOGGER.info("Some Test - info message");
         LOGGER.error("Some Test - error message");
+
+        FooBar fooBar = new FooBar();
+
+        if( !fooBar.toDo()){
+            LOGGER.error("toDo haven't been done (");
+        }
+
+        LOGGER.info("Test has finished");
     }
 
 }
